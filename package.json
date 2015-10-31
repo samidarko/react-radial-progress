@@ -1,5 +1,5 @@
 {
-  "name": "radial-progress",
+  "name": "react-radial-progress",
   "version": "1.0.0",
   "description": "a radial progress bar in react js and SVG",
   "main": "src/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samidarko/radial-progress.git"
+    "url": "git+https://github.com/samidarko/react-radial-progress.git"
   },
   "keywords": [
     "radial",
@@ -20,7 +20,7 @@
   "author": "Sami Darko <samidarko@gmail.com> (https://github.com/samidarko)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samidarko/radial-progress/issues"
+    "url": "https://github.com/samidarko/react-radial-progress/issues"
   },
-  "homepage": "https://github.com/samidarko/radial-progress#readme"
+  "homepage": "https://github.com/samidarko/react-radial-progress#readme"
 }
