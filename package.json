@@ -2,11 +2,15 @@
   "name": "react-radial-progress",
   "version": "0.0.0-semantically-released",
   "description": "a radial progress bar in react js and SVG",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/RadialProgress.js -o dist/index.js",
     "commit": "git-cz",
-    "test": "mocha src/index_test.js -w",
-    "test:single": "mocha src/index_test.js",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "mocha src/index_test.js -w --compilers js:babel/register",
+    "test:single": "istanbul cover -x *_test.js _mocha -- -R spec src/index_test.js --compilers js:babel/register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -27,11 +31,16 @@
   },
   "homepage": "https://github.com/samidarko/react-radial-progress#readme",
   "devDependencies": {
+    "babel": "5.8.21",
     "chai": "3.4.0",
+    "codecov": "1.0.1",
     "commitizen": "2.3.0",
     "cz-conventional-changelog": "1.1.4",
     "ghooks": "0.3.2",
+    "istanbul": "0.4.0",
     "mocha": "2.3.3",
+    "react": "0.14.1",
+    "react-addons-test-utils": "0.14.1",
     "semantic-release": "^4.3.5"
   },
   "czConfig": {

@@ -1,5 +1,4 @@
 import React from 'react';
-import AuthenticatedComponent from '../containers/AuthenticatedComponent';
 
 function clamp (n, min, max) {
     return Math.max(min, Math.min(max, n));
