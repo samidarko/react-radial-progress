@@ -1,14 +1,16 @@
 {
   "name": "react-radial-progress",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "a radial progress bar in react js and SVG",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index_test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samidarko/react-radial-progress.git"
+    "url": "https://github.com/samidarko/react-radial-progress.git"
   },
   "keywords": [
     "radial",
@@ -22,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/samidarko/react-radial-progress/issues"
   },
-  "homepage": "https://github.com/samidarko/react-radial-progress#readme"
+  "homepage": "https://github.com/samidarko/react-radial-progress#readme",
+  "devDependencies": {
+    "chai": "3.4.0",
+    "commitizen": "2.3.0",
+    "cz-conventional-changelog": "1.1.4",
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
